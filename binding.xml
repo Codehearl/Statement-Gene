@@ -1,0 +1,16 @@
+<jaxb:bindings version="2.1"
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    jaxb:extensionBindingPrefixes="xjc">
+    
+    <jaxb:bindings schemaLocation="http://camundasvr/WebStatement/Statement.asmx?wsdl#types?schema1" node="/xs:schema">
+        <!-- Rename the element-based class -->
+        <jaxb:bindings node="//xs:element[@name='SendEmailStatementResponse']">
+            <jaxb:class name="SendEmailStatementResponseElement"/>
+        </jaxb:bindings>
+        <!-- Rename the complex type-based class -->
+        <jaxb:bindings node="//xs:complexType[@name='SendEmailStatementResponse']">
+            <jaxb:class name="SendEmailStatementResponseType"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+</jaxb:bindings>
